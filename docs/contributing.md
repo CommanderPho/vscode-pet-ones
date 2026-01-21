@@ -49,6 +49,8 @@ To add a new pet type, create a folder under `media/<pet-name>/` and include the
 
 Additional states (e.g., `walk_fast`, `stand`, `wallclimb`) can be added if the pet's sequence uses them, but the list above is the minimal set expected by the default behaviors.
 
+Use the color names defined in `src/common/types.ts` (e.g., `brown`, `white`, `red`) for the `<color>` portion of the filenames so the extension can resolve them automatically. Keep GIFs at 8 FPS with transparent backgrounds and consistent dimensions across states to avoid visual jumps. The `<pet-name>` folder should match the pet's `PetType` identifier used in code (for example, `media/fox` for `PetType.fox`).
+
 ## Testing the changes
 
 * Run `npm install`.
