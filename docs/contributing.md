@@ -34,6 +34,21 @@ The minimum set of behaviors is:
 * running/chasing
 * holding green ball
 
+### Minimal assets for a new pet type
+
+To add a new pet type, create a folder under `media/<pet-name>/` and include the following minimal assets:
+
+* An icon (`icon.png`) or color-specific icons (`icon_<color>.png`) used in the pet picker.
+* For each supported color, 8 FPS GIFs named:
+    * `<color>_idle_8fps.gif`
+    * `<color>_walk_8fps.gif`
+    * `<color>_run_8fps.gif`
+    * `<color>_lie_8fps.gif`
+    * `<color>_with_ball_8fps.gif`
+    * `<color>_swipe_8fps.gif` (for the wave animation when hovered)
+
+Additional states (e.g., `walk_fast`, `stand`, `wallclimb`) can be added if the pet's sequence uses them, but the list above is the minimal set expected by the default behaviors.
+
 ## Testing the changes
 
 * Run `npm install`.
